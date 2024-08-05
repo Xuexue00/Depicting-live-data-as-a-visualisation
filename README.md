@@ -1,5 +1,6 @@
 # Project Overview
 This project presents carbon emissions data through an interactive web interface. It includes a main page and four data visualization charts, depicting emissions over time, by region, by project, and by cloud status. All visualization charts are housed within a `templates` directory, while the main page is located at the project's root level.
+I verify that I am the sole author of the programmes contained in this archive, except where explicitly stated to the contrary.
 
 ## File Structure
 ```
