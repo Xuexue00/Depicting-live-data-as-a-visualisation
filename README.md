@@ -14,8 +14,10 @@ This project presents carbon emissions data through an interactive web interface
 ├── app.py                 # Python script for data generation or backend logic
 ├── synthetic_data.csv     # Synthetic data, possibly used for visualizations
 ├── emissions-1.csv        # Original carbon emissions data
-└── Synthetic data.ipynb   # Jupyter notebook for synthetic data analysis and processing
+├── Synthetic data.ipynb   # Jupyter notebook for synthetic data analysis and processing
+└──Static visualisation.ipynb # Jupyter notebook for static data visualisation
 ```
+
 
 ## Tech Stack
 - HTML/CSS
@@ -31,6 +33,8 @@ This project presents carbon emissions data through an interactive web interface
 - Make sure to test modifications to the Python script or HTML files in a local environment before deployment.
 - Before deploying to production, double-check that all file paths are correctly set and all dependencies are properly loaded.
 
+## Maintainer
+- Information about the maintainer(s) (fill in based on project details)
 
 ## File Descriptions
 - **index.html**: The main page of the project, containing tabs for navigation, allowing users to view different data visualizations.
@@ -38,3 +42,4 @@ This project presents carbon emissions data through an interactive web interface
 - **app.py**: A Python script that may be used for backend data processing or generating data for the front-end charts.
 - **synthetic_data.csv** and **emissions-1.csv**: These CSV files contain the original and synthetic data used for the visualizations.
 - **Synthetic data.ipynb**: Jupyter notebook that includes analysis and processing of synthetic data for visualization.
+- **Static visualisation.ipynb**: Jupyter notebook that includes static data visualisation.
