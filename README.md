@@ -31,8 +31,6 @@ This project presents carbon emissions data through an interactive web interface
 - Make sure to test modifications to the Python script or HTML files in a local environment before deployment.
 - Before deploying to production, double-check that all file paths are correctly set and all dependencies are properly loaded.
 
-## Maintainer
-- Information about the maintainer(s) (fill in based on project details)
 
 ## File Descriptions
 - **index.html**: The main page of the project, containing tabs for navigation, allowing users to view different data visualizations.
