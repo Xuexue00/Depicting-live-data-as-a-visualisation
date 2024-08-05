@@ -15,7 +15,7 @@ This project presents carbon emissions data through an interactive web interface
 ├── synthetic_data.csv     # Synthetic data, possibly used for visualizations
 ├── emissions-1.csv        # Original carbon emissions data
 ├── Synthetic data.ipynb   # Jupyter notebook for synthetic data analysis and processing
-└──Static visualisation.ipynb # Jupyter notebook for static data visualisation
+└── Static visualisation.ipynb # Jupyter notebook for static data visualisation
 ```
 
 
