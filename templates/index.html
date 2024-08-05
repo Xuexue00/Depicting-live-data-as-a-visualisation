@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carbon emissions data visualisation</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #d0f8ce, #56ab2f);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            #background-color: #FA8072; 
+            color: #fff;
+            font-size: 45px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            #background-color: #FA8072;
+            padding: 10px 0;
+            border-bottom: 1px solid transparent;
+        }
+        .tabs button {
+            background-color: rgba(64,112,52, 0.8); /* Slightly transparent to show gradient */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 0 5px;
+            font-size: 15px; 
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
+        }
+        .tabs button:hover {
+            background-color: #00AA55; /* Slightly transparent to show gradient */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+            transform: translateY(-2px); /* Move up on hover */
+        }
+        .tabs button:active {
+            background-color: rgba(247, 220, 111, 0.8); /* Slightly transparent to show gradient */
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3); /* Inset shadow on click */
+            transform: translateY(2px); /* Move down on click */
+        }
+
+        .tabs button.active {
+            background-color: #F7DC6F;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .tab-content {
+            display: none;
+            #background: transparent;
+            padding: 20px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+        }
+    </style>
+    <script>
+        function showTab(tabIndex) {
+            var tabs = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            document.getElementById('tab-' + tabIndex).classList.add('active');
+            
+            var buttons = document.querySelectorAll('.tabs button');
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            document.querySelector('.tabs button:nth-child(' + tabIndex + ')').classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <h1>Carbon emissions data visualisation</h1>
+    <div class="tabs">
+        <button onclick="showTab(1)">Emissions Over Time</button>
+        <button onclick="showTab(2)">Emissions By Region</button>
+        <button onclick="showTab(3)">Emissions By Project</button>
+        <button onclick="showTab(4)">Emissions By Cloud Status</button>
+    </div>
+
+    <div id="tab-1" class="tab-content active">
+        <iframe src="/plot"></iframe>
+    </div>
+
+    <div id="tab-2" class="tab-content">
+        <iframe src="/plot2"></iframe>
+    </div>
+
+    <div id="tab-3" class="tab-content">
+        <iframe src="/plot3"></iframe>
+    </div>
+
+    <div id="tab-4" class="tab-content">
+        <iframe src="/plot4"></iframe>
+    </div>
+</body>
+</html>

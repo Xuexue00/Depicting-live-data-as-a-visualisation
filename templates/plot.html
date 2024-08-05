@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plotly Chart</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
+            color: #FFFF00;
+            margin: 10px;
+            padding: 0;
+        }
+        #plotly-chart {
+            width: 100%;
+            height: 80vh;
+            background-color: transparent;
+        }
+        .plotly .modebar-btn {
+            background-color: #fff !important; 
+            color: #fff !important;
+        }
+        .plotly .modebar-btn:hover {
+            background-color: #FFFF00 !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="plotly-chart"></div>
+    <script>
+        var data = {{ data|safe }};
+        var layout = {{ layout|safe }};
+        var frames = {{ frames|safe }};
+        
+        Plotly.newPlot('plotly-chart', data, layout).then(function() {
+            Plotly.addFrames('plotly-chart', frames);
+        });
+    </script>
+</body>
+</html>
